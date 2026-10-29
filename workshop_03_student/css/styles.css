@@ -1,0 +1,159 @@
+:root {
+    --ink: #13304e;
+    --blue: #0b7285;
+    --cream: #f7fafb;
+    --line: #c8d7e2
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font: 17px/1.5 system-ui, sans-serif
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem max(5vw, 2rem);
+    background: #fff;
+    border-bottom: 1px solid var(--line)
+}
+
+.brand {
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--ink);
+    text-decoration: none
+}
+
+nav a {
+    color: var(--blue);
+    font-weight: 700;
+    text-decoration: none
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 3rem 5vw
+}
+
+.narrow {
+    max-width: 760px
+}
+
+.hero {
+    padding: 3rem 0
+}
+
+.eyebrow {
+    color: #087f5b;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: .8rem
+}
+
+.lead,
+.muted {
+    color: #506879
+}
+
+.button,
+button {
+    display: inline-block;
+    border: 0;
+    border-radius: .5rem;
+    padding: .7rem 1rem;
+    background: var(--blue);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none
+}
+
+.active {
+    background: #c2410c
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+    background: #fff;
+    padding: 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: .75rem
+}
+
+form h2 {
+    margin: 1rem 0 0
+}
+
+label {
+    display: grid;
+    gap: .35rem;
+    font-weight: 700
+}
+
+input {
+    width: 100%;
+    padding: .65rem;
+    border: 1px solid #8ea5b7;
+    border-radius: .4rem;
+    font: inherit
+}
+
+.map-controls {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    margin: 1rem 0
+}
+
+.location-result,
+.status,
+.estimate {
+    padding: 1rem;
+    background: #e9f5f5;
+    border-radius: .5rem
+}
+
+.status {
+    margin: 1rem 0
+}
+
+.estimate {
+    margin-top: 1rem;
+    background: #fff7ed;
+    border: 1px solid #fed7aa
+}
+
+#map {
+    height: 430px;
+    border: 1px solid var(--line);
+    border-radius: .75rem;
+    z-index: 0
+}
+
+.leaflet-container {
+    font: inherit
+}
+
+@media(max-width:600px) {
+    header {
+        gap: 1rem;
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .container {
+        padding-top: 2rem
+    }
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Delivery request | SwiftDrop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+<body>
+    <header><a class="brand" href="index.html">SwiftDrop</a>
+        <nav><a href="delivery.html">ส่งพัสดุ</a> · <a href="profile.html">ข้อมูลผู้ใช้</a></nav>
+    </header>
+    <main class="container narrow">
+        <p class="eyebrow">สวัสดีคุณ X</p>
+        <h1>Request a delivery</h1>
+        <p class="lead">Pick your pickup and destination points on the map instead of typing addresses.</p>
+        <section aria-labelledby="location-heading">
+            <h2 id="location-heading">Choose locations on the map</h2>
+            <!-- Step 5 improvement: a numbered, required-step instruction tells users exactly what to do in order
+                 (1 pickup, 2 destination, 3 reserve), so they don't have to guess which pin the next click moves. -->
+            <p>Steps: <strong>1)</strong> Click "Edit pickup pin", then tap the map. <strong>2)</strong> Click "Edit
+                destination pin", then tap the map. <strong>3)</strong> Press "Reserve driver" (enabled once both pins
+                are set). You can move either pin at any time.</p>
+            <div class="map-controls">
+                <button id="choose-pickup" type="button">Edit pickup pin</button>
+                <button id="choose-destination" type="button">Edit destination pin</button>
+            </div>
+            <p id="pickup-result" class="location-result">Pickup: not selected</p>
+            <p id="destination-result" class="location-result">Destination: not selected</p>
+            <p id="status" class="status" role="status">Click the map to choose pickup.</p>
+            <div id="map" aria-label="Map with selectable delivery locations"></div>
+            <button id="reserve" type="button" disabled>Reserve driver</button>
+            <p id="waiting" class="waiting" hidden>Finding a driver<span class="dots">...</span></p>
+            <section id="summary" class="estimate" hidden></section>
+            <button id="confirm" type="button">Confirm mock payment</button>
+        </section>
+    </main>
+
+    <!-- Step 6 peer test task: "You need to send a parcel from Siam Paradon to Chatuchak Market. Book a driver and
+         confirm the mock payment." Hesitation observed: (fill in after testing with a classmate) -->
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/delivery-free-map.js"></script>
+</body>
+
+</html>
